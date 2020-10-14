@@ -3,17 +3,15 @@
 
 void categorizar_pa(std::vector<float> sequencia, int n) {
 	float razao = sequencia[1] - sequencia[0];
-	bool pa = false;
+	bool pa = true;
 
 	for (int i = 2; i < n; ++i) {
-		if (sequencia[i] - sequencia[i-1] == razao) {
-			pa = true;
-		}
-		else {
+		if (sequencia[i] - sequencia[i-1] != razao) {
 			pa = false;
 			break;
 		}
 	}
+
 	if (pa == true) {
 		if (razao > 0) {
 			std::cout << "A sequencia eh P.A. crescente";

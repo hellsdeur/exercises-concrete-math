@@ -1,14 +1,18 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <iostream> // std::cin e std::cout
+#include <vector> 	// std::vector
+#include <cmath> 	// std::pow()
 
-void soma_produto_pg(std::vector<float> sequencia, int n) {
-	float q = sequencia[1] / sequencia[0];
+float round(float num) {
+	return std::floor(num*100000.0) / 100000.0;
+}
+
+void soma_produto_pg(std::vector<float> seq, int n) {
+	float q = round(seq[1] / seq[0]);
 	bool pg = false;
 	float soma, prod;
 
-	for (int i = 2; i < n; ++i){
-		if ((sequencia[i] / sequencia[i-1] == q) || std::isnan(sequencia[i] / sequencia[i-1])) {
+	for (int i = 2; i < n; ++i) {
+		if (round(seq[i] / seq[i-1]) == q || q == 0 && seq[i-1] == 0) {
 			pg = true;
 		}
 		else {
@@ -18,8 +22,8 @@ void soma_produto_pg(std::vector<float> sequencia, int n) {
 	}
 
 	if (pg == true){
-		prod = pow(sequencia[0], n) * pow(q, n*(n-1)/2.0);
-		soma = (sequencia[0] * pow(q, n) - sequencia[0]) / (q-1);
+		soma = (seq[0] * pow(q, n) - seq[0]) / (q-1);
+		prod = pow(seq[0], n) * pow(q, n*(n-1)/2.0);
 
 		std::cout << "A sequencia eh uma P.G.\n";
 		std::cout << "Sua soma eh: " << soma << "\n";
@@ -33,7 +37,9 @@ int main() {
 	float x;
 	std::vector<float> sequencia;
 
+	std::cout << "Insira o tamanho da sequencia: ";
 	std::cin >> n;
+	std::cout << "Insira os " << n << " elementos da sequencia: ";
 	for (int i = 0; i < n; ++i){
 		std::cin >> x;
 		sequencia.push_back(x);

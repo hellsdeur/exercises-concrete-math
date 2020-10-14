@@ -6,7 +6,6 @@ std::vector<float> recorrencia_1c(float c_1, int n) {
 
 	for (int i = 2; i <= n; ++i) {
 		elementos.push_back(2 * elementos.back() + i);
-		--n;
 	}
 
 	return elementos;

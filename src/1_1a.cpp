@@ -1,7 +1,7 @@
 #include <iostream> // std::cin e std::cout
 #include <vector> 	// std::vector
 
-std::vector<float> recorrencia_1a (float a_1, int n){
+std::vector<float> recorrencia_1a(float a_1, int n) {
 	std::vector<float> elementos = {a_1};
 
 	while (n > 1) {
@@ -12,7 +12,7 @@ std::vector<float> recorrencia_1a (float a_1, int n){
 	return elementos;
 }
 
-int main (){
+int main() {
 	int a_1, n;
 	std::vector<float> resposta;
 

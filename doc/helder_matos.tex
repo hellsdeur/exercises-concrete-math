@@ -2,16 +2,16 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[brazilian]{babel}
+\usepackage[brazil]{babel}
 \usepackage[margin=2cm]{geometry}
-\usepackage{booktabs, float, amsmath,amsthm,amssymb, enumitem, multicol, tikz, mdframed, listings, xcolor}
+\usepackage{booktabs, float, amsmath,amsthm,amssymb, enumitem, tikz, mdframed, listings, xcolor, graphicx}
 \usetikzlibrary{arrows}
 
 \newcounter{csol}[enumi]
 \renewcommand*{\thecsol}{\theenumi.\alph{csol}}
 \newmdtheoremenv[linecolor=black!50]{solution}[csol]{Solution}
 
-\lstset{basicstyle=\scriptsize\ttfamily \color{black},
+\lstset{basicstyle=\scriptsize\ttfamily\color{black},
 		language=C++,
 		frame=single,
 		keywordstyle=\color{red},
@@ -27,12 +27,16 @@
 	
 \title{Matemática Concreta - Listas de exercícios}
 \author{Helder Mateus dos Reis Matos - 201904940036}
-\date{\today}
+\date{28 de outubro de 2020}
 
 \begin{document}
 
 \maketitle
 
+\textbf{Atenção: } A linguagem C++ foi usada para implementação. Os passos importantes do programa são descritos e indicados pelas linhas \verb|[inicial:final]|, com limites inclusivos.
+
 \input{lista_1}
+\pagebreak
+\input{lista_2}
 
 \end{document}

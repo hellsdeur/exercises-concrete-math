@@ -2,8 +2,8 @@
 #include <vector> 	// std::vector
 #include <cmath> 	// pow()
 
-std::vector<long double> recorrencia_1b(float b_1, int n) {
-	std::vector<long double> elementos = {b_1};
+std::vector<float> recorrencia_1b(float b_1, int n) {
+	std::vector<float> elementos = {b_1};
 
 	while (n > 1) {
 		elementos.push_back(pow(elementos.back(), 2));
@@ -16,7 +16,7 @@ std::vector<long double> recorrencia_1b(float b_1, int n) {
 int main() {
 	int n;
 	float b_1;
-	std::vector<long double> resposta;
+	std::vector<float> resposta;
 
 	std::cout << "Insira o valor de b_1: ";
 	std::cin >> b_1;
