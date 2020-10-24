@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> concatenar(std::vector<int> input_A, std::vector<int> input_B) {
-	std::vector<int> ba;
+std::vector<int> concatenar(std::vector<int> vec1, std::vector<int> vec2) {
+	std::vector<int> concatenacao;
 
-	ba.insert(ba.end(), input_B.begin(), input_B.end());
-	ba.insert(ba.end(), input_A.begin(), input_A.end());
+	concatenacao.insert(concatenacao.end(), vec1.begin(), vec1.end());
+	concatenacao.insert(concatenacao.end(), vec2.begin(), vec2.end());
 
-	return ba;
+	return concatenacao;
 }
 
 int main() {
@@ -32,10 +32,8 @@ int main() {
 		input_B.push_back(x);
 		--n;
 	}
-	ba = concatenar(input_A, input_B);
+	ba = concatenar(input_B, input_A);
 
 	std::cout << ba.size() << " elementos BA: ";
-	for (auto i: ba) {
-		std::cout << i << " ";
-	}
+	for (auto i: ba) std::cout << i << " ";
 }

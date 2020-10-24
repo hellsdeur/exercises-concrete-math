@@ -15,9 +15,7 @@ bool primacidade(int num) {
 std::vector<int> subseq_primos(std::vector<int> input) {
 	std::vector<int> primos;
 
-	for (auto i: input) {
-		if (primacidade(i) == true) primos.push_back(i);
-	}
+	for (auto i: input) if (primacidade(i)) primos.push_back(i);
 
 	return primos;
 }
@@ -38,7 +36,5 @@ int main() {
 	primos = subseq_primos(input);
 
 	std::cout << primos.size() << " elementos primos: ";
-	for (auto i: primos) {
-		std::cout << i << " ";
-	}
+	for (auto i: primos) std::cout << i << " ";
 }

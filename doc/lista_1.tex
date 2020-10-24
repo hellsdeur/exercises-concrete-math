@@ -1,33 +1,22 @@
-\section*{Lista 1}
+\section*{Atividade aula 1}
 
 \begin{enumerate}
-	\item \textbf{Escolha uma linguagem de programação, implemente as funções de
-	recorrência e exiba os seis primeiros termos de cada sequência. Inclua o código fonte das funções na resposta.}
+	\item \textbf{Escolha uma linguagem de programação, implemente as funções de recorrência e exiba os seis primeiros termos de cada sequência. Inclua o código fonte das funções na resposta.}
 	\begin{enumerate}
 		\item $a_1 = 5$ e $a_n = a_{n-1}+3, \forall n > 1$
 		\lstinputlisting{../src/1_1a.cpp}
-		\verb|[4:5]| - Ao receber os valores de $a_1$ e $n$, a função \verb|recorrencia_1a| cria um vetor \verb|elementos|, contendo os elementos da sequência. Como o primeiro elemento é dado na entrada, o vetor já é inicializado com $a_1$.\\
-		\verb|[7:10]| - Um laço de repetição adiciona ao vetor os elementos seguintes. O próximo elemento sempre será igual ao último elemento (retornado pela função \verb|back()|) + 3.\\
-		\verb|[12]| - Ao fim do laço, os $n$ termos da sequência são retornados.
 
 		\item $b_1 = 2$ e $b_n = b_{n-1}^2, \forall n > 1$
 		\lstinputlisting{../src/1_1b.cpp}
-		\verb|[5:6]| - Similar a questão 1.a, a função \verb|recorrencia_1b| cria um vetor inicializado com o primeiro elemento $b_1$.\\
-		\verb|[8:11]| - O próximo elemento sempre será igual ao último elemento ao quadrado.\\
-		\verb|[13]| - A função \verb|recorrencia_1b| retorna os $n$ elementos da sequência.
 
 		\item $c_1 = 0$ e $c_n = 2c_{n-1}+n, \forall n > 1$
 		\lstinputlisting{../src/1_1c.cpp}
-		\verb|[4:5]| - Da mesma forma, \verb|recorrencia_1c| começa com a declaração de um vetor contendo o primeiro elemento $c_1$.\\
-		\verb|[7:9]| - O valor de $n$ é usado na função de recorrência, portanto inicia-se um laço \verb|for| onde o próximo elemento sempre será igual ao dobro do anterior + $n$.\\
-		\verb|[12]| - A sequência resultante é retornada da função.
 	\end{enumerate}
 
 	\item \textbf{Escolha uma linguagem de programação e escreva um programa para receber uma sequência numérica e informar se a sequência é um P.A ou não. Caso seja uma P.A, o programa deve informar se a P.A é crescente, constante ou decrescente.}
 	\lstinputlisting{../src/1_2.cpp}
-	\verb|[4:6]| - O procedimento \verb|categorizar_pa| recebe a sequência numérica e seu tamanho, ambos inseridos pelo usuário. Em seguida, a variável \verb|razao| é declarada e armazena o valor da diferença entre o segundo e primeiro elemento. A booleana \verb|pa| indica se a sequência é uma P.A., ao decorrer do algoritmo.\\
-	\verb|[8:13]| - Ocorre a iteração sobre os elementos da sequência, a partir do terceiro, sempre verificando se a diferença entre o elemento atual e o anterior difere da \verb|razao| entre os dois primeiros. Caso seja diferente em qualquer momento, \verb|pa| se torna falsa e o loop é quebrado. Caso contrário, \verb|pa| sempre será verdadeira, já que a razão de uma P.A. é sempre constante.\\
-	\verb|[15:29]| - Para exibir a informação da categoria da P.A., uma estrutura condicional aninhada é formada. Caso \verb|pa| seja verdadeira, o sinal positivo, negativo ou nulo da \verb|razao| indica se ela é crescente, decrescente ou constante, respectivamente.
+	\verb|[3:10]| - A função \verb|checar_pa| recebe um array contendo a sequência, a razão entre os dois primeiros elementos e o seu tamanho $n$. Se a diferença entre um termo da sequência e o seu anterior for diferente da razão, a sequência não é P.A. Caso a razão se mantenha constante pra cada par de elementos, a sequência é P.A. \\
+	\verb|[12:29]| - \verb|categorizar_pa| recebe apenas a sequência e seu tamanho. Ao calcular a razão entre o segundo e primeiro termo, é chamada a função \verb|checar_pa|, que dependendo do seu retorno e do valor da razão, classifica a sequência em "não P.A.", P.A. crescente, P.A. decrescente ou P.A. constante.
 	
 	\item \textbf{Sabendo que o primeiro termo é igual a 3 e a razão é igual a 5, calcule o 17 o termo de uma P.A.}\\
 	O enésimo termo de uma P.A., onde o primeiro termo é $a_1$ e a razão é $r$, é dado por:
@@ -51,9 +40,8 @@
 	\pagebreak
 	\item \textbf{Escolha uma linguagem de programação e escreva um programa para receber os extremos de uma P.A, o valor de K e calcule a interpolação dessa P.A.}
 	\lstinputlisting{../src/1_5.cpp}
-	\verb|[4:6]| - A função \verb|interpor_pa| recebe os três dados do usuário, $a_1$, $a_n$ e $k$. São declarados a variável \verb|q|, que armazena a razão da sequência, e o vetor \verb|elementos|.\\
-	\verb|[8:12]| - A razão $r = \frac{a_n - a_1}{k+1}$ da P.A. é calculada. Em seguida um laço de repetição insere o valor atual de $a_1$ no vetor \verb|elementos| e soma o mesmo com o valor da \verb|razao|, até que $a_1 = a_n$.\\
-	\verb|[14]| - A P.A. interpolada é retornada.
+	\verb|[3:10]| - O procedimento \verb|interpor_pa| recebe uma sequência vazia, os extremos da P.A. e a quantidade $k$ de elementos entre os extremos. De posse da razão, cada elemento da P.A. é inserido na sequência, começando do primeiro até o último, conforme o valor da razão.\\
+	\verb|[23:33]| - Como o tamanho da sequência ($k+2$) depende da entrada e não é mais alterado, optou-se pela alocação dinâmica do array, ao invés de estruturas mais sofisticadas.
 		
 	\item \textbf{Calcule a P.A em que a soma dos n primeiros termos é igual a $n^2 + 2n$.}\\
 	Conhecendo a expressão da soma dos $n$ termos, podemos encontrar a soma $S_1$ do primeiro termo, que nada mais é do que o primeiro termo:
@@ -69,27 +57,23 @@
 	
 	\item \textbf{Escolha uma linguagem de programação e escreva um programa para receber uma sequência numérica e informar se a sequência é um P.G ou não. Caso seja uma P.G, o programa deve informar se a P.G é crescente, constante, decrescente, alternante ou estacionária.}
 	\lstinputlisting{../src/1_7.cpp}
-	\verb|[7:9]| - Verificou-se que seria interessante fazer a entrada de sequência de números reais fracionários para esta questão, para solucionar o problema de precisão de representação de pontos flutuantes. Foi criada a função \verb|round| que "arredonda para baixo" (através da \verb|std::floor|) um número real, com precisão de 6 casas decimais.\\
-	\verb|[11:36]| - Para a entrada de números reais fracionários, foi criada a função \verb|parse_stof| que converte strings em valores numéricos, além de verificar se há sinal de divisão \verb|'/'| dentre os números da sequência inserida. Caso exista, é efetuada a divisão entre o numerador e o denominador. Desse modo, é possível representar com mais exatidão dízimas periódicas, e.g. $1/3 = 0.3333...$\\
-	\verb|[38:52]| - Não há função nativa equivalente em C++ para dividir uma string por caractere, como em outras linguagens. A função \verb|split_and_parse| foi criada com esse intuito, analisando uma stream que contém a string inserida pelo usuário e criando um vetor \verb|splitted_strings|, contendo as substrings divididas por espaços simples. Em seguida a função \verb|parse_stof| é chamada para a conversão das strings em floats.\\
-	\verb|[54:55]| - O procedimento \verb|categorizar_pg| recebe a sequência \verb|seq| e seu tamanho $n$. Para encontrar o valor de $q$, bastaria dividir qualquer um dos termos da sequência pelo anterior, sendo escolhidos os dois primeiros. Note que isso traria um problema de precisão decimal, que é rapidamente solucionado pela função \verb|round|, definida em \verb|[7:9]|.\\
-	\verb|[58:66]| - É verificado para cada termo a partir do terceiro, se a razão entre ele e o anterior é igual a razão dos dois primeiros, calculada em \verb|[55]|. Não somente isso, caso a sequência venha a ser estacionária ($q=0$), em algum momento ocorreria uma divisão por zero, fato mencionado na segunda operação lógica da condição. Se uma das condições se satisfazerem para todos os elementos, a sequência é P.G. Caso contrário, ou seja, se pelo menos uma das razões entre dois termos for diferente ou a P.G. não for estacionária, a sequência não é P.G.\\
-	\verb|[68:88]| - O último passo do procedimento é categorizar, dependendo do valor de $q$, e, quando necessário, do sinal dos termos da sequência. Caso $q > 1$ para termos positivos ou $0 < q < 1$ para termos negativos, a P.G. é crescente. Caso $0 < q < 1$ para termos negativos ou $q > 1$ para termos positivos, a P.G. é decrescente. Se $q = 1$ para termos não nulos, a P.G. é constante. Se $q < 0$, os termos alternam o sinal. Para $q = 0$, a P.G. é estacionária.
+	\verb|[6:8]| - Excepcionalmente nessa solução é possível fazer a entrada de sequência de números reais fracionários, e.g. $1/3$. Para solucionar o problema de precisão na representação de pontos flutuantes foi criada a função \verb|chao| que arredonda um número real para baixo, com precisão de 6 casas decimais.\\
+	\verb|[10:35]| - Para a entrada de números reais fracionários, foi criada a função \verb|parse_stof| que converte strings em valores numéricos, além de verificar se há sinal de divisão \verb|'/'| dentre os números da sequência inserida. Caso exista, é efetuada a divisão entre o numerador e o denominador. Desse modo, é possível representar com mais exatidão dízimas periódicas.\\
+	\verb|[37:46]| - Não há função nativa em C++ para dividir uma string por caractere, como em outras linguagens. A função \verb|split| foi criada com esse intuito, dividindo a stream de strings inserida pelo usuário em strings divididas por espaços simples. Em seguida a função \verb|parse_stof| é chamada para a conversão das strings em floats.\\
+	\verb|[48:55]| - É retornado de \verb|checar_pg| um booleano indicando se a sequência informada é uma P.G., baseada na razão $q$ entre os dois primeiros números.\\
+	\verb|[57:81]| - A P.G. é classificada de acordo com o valor de $q$, e, quando necessário, do sinal dos termos da sequência. Caso $q > 1$ para termos positivos ou $0 < q < 1$ para termos negativos, a P.G. é crescente. Caso $0 < q < 1$ para termos negativos ou $q > 1$ para termos positivos, a P.G. é decrescente. Se $q = 1$ para termos não nulos, a P.G. é constante. Se $q < 0$, os termos alternam o sinal. Para $q = 0$, a P.G. é estacionária.
 	
 	\item \textbf{Escolha uma linguagem de programação e escreva um programa para receber os extremos de uma P.G, o valor de K e calcule a interpolação dessa P.G.}
 	\lstinputlisting{../src/1_8.cpp}
-	\verb|[5:7]| - \verb|interpor_pa| recebe o extremo inferior $a_1$, o extremo superior $a_ n$ e o valor de $k$ termos intermediários. O float $q$ é a razão entre elementos consecutivos, enquanto o vetor \verb|elementos| armazena os elementos da interpolação.\\
-	\verb|[9:13]| - É definido $q = \frac{a_n - a_1}{k+1}$. De posse do valor de $q$ basta usá-lo para incrementar geometricamente o valor de $a_1$ e inserir os resultados no vetor \verb|elementos|, até que $a_1 = a_n$.
+	\verb|[4:12]| - \verb|interpor_pa| recebe a sequência vazia, o extremo inferior $a_1$, o extremo superior $a_ n$ e o valor de $k$ termos intermediários. A razão entre elementos consecutivos $q = \sqrt[k+1]{\frac{a_n}{a_1}}$ é usada para incrementar geometricamente o valor de $a_1$ a cada iteração no array que armazena a sequência.
 	
-	\pagebreak
 	\item \textbf{Escolha uma linguagem de programação e escreva um programa para receber uma sequência numérica. Se a sequência numérica for uma P.G, informe a produto e a soma dos termos dessa P.G. Caso contrário, informe que a sequência não é uma P.G.}
 	\lstinputlisting{../src/1_9.cpp}
-	\verb|[5:7]| - Desta vez não se fará o uso de entradas fracionárias, mas manteve-se a função de arrendondamento para baixo.\\
-	\verb|[5:8]| - O procedimento \verb|soma_produto_pg| recebe a sequência e seu tamanho. Em seguida, $q$ é declarada como a razão entre o segundo e primeiro elemento, junto a uma booleana que indica se a sequência é P.G. e variáveis para armazenar soma e produto. Note que não há necessidade de iniciar essas variáveis, pois existem relações já definidas para calculá-las, em detrimento da acumulação causada por uma iteração.\\
-	\verb|[14:22]| - Para cada termo em diante, verifica-se se o quociente entre o mesmo e o seu anterior é igual à razão $q$, evitando também o caso especial em que a P.G. é estacionária.\\
-	\verb|[24:33]| - Como já mencionado acima, ocorre a aplicação da soma da P.G, $S_{P.G.} = \frac{a_1q^n-a_ 1}{q-1}$, e do produto da P.G., $P_{P.G.} = a_1^n\cdot q^{\frac{n(n-1)}{2}}$. Em seguida, os resultados são apresentados.
+	\verb|[5:7]| - Desta vez não se fará o uso de entradas em forma de fração, mas manteve-se a função de arrendondamento para baixo, pois os resultados das divisões a seguir podem ser fracionários e não serem representados de forma precisa, ocasionando inconsistência ao compará-los com outros números fracionários.\\
+	\verb|[9:16]| - \verb|checar_pg| verifica se a razão entre cada elemento da sequência e seu antecessor é igual à razão entre os dois primeiros.
+	\verb|[18:33]| - O procedimento \verb|soma_produto_pg| recebe a sequência e seu tamanho e verifica se é uma P.G. Se for, ocorre a aplicação da soma da P.G, $S_{P.G.} = \frac{a_1q^n-a_ 1}{q-1}$, e do produto da P.G., $P_{P.G.} = a_1^n\cdot q^{\frac{n(n-1)}{2}}$. Em seguida, os resultados são apresentados.
 
-	\item \textbf{Determine o valor de $n$ tal que $\sum_{i=3}^n 2^i = 4088$}
+	\item \textbf{Determine o valor de $n$ tal que $\sum_{i=3}^n 2^i = 4088$}\\
 	Para encontrar a soma de $i=3$ até $n$, basta notar que a soma de $i=1$ até $n$ pode ser representada da seguinte forma:
 	$$\sum_{i=1}^{n} 2^i = \sum_{i=1}^{2} 2^i + \sum_{i=3}^{n} 2^i$$
 	O lado esquerdo representa a soma de uma progressão geométrica.

@@ -29,7 +29,5 @@ int main() {
 	sufixo = sufixar(input, k);
 
 	std::cout << "Sufixo de comprimento " << k << ": ";
-	for (auto i: sufixo) {
-		std::cout << i << " ";
-	}
+	for (auto i: sufixo) std::cout << i << " ";
 }

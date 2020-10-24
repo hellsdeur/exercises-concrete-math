@@ -5,9 +5,7 @@ std::vector<int> subseq_impar(std::vector<int> input) {
 	std::vector<int> impares;
 
 	for (auto i: input) {
-		if (i % 2 != 0) {
-			impares.push_back(i);
-		}
+		if (i % 2 != 0) impares.push_back(i);
 	}
 
 	return impares;
@@ -29,7 +27,5 @@ int main() {
 	impares = subseq_impar(input);
 
 	std::cout << impares.size() << " elementos impares: ";
-	for (auto i: impares) {
-		std::cout << i << " ";
-	}
+	for (auto i: impares) std::cout << i << " ";
 }

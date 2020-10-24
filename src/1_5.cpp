@@ -1,23 +1,17 @@
 #include <iostream> // std::cin e std::cout
-#include <vector> 	// std::vector
 
-std::vector<float> interpor_pa(float a_1, float a_n, int k) {
-	float razao;
-	std::vector<float> elementos;
+void interpor_pa(float* pa, float a_1, float a_n, int k) {
+	float razao = (a_n - a_1)/(k+1); // razao da pa
 
-	razao = (a_n - a_1)/(k+1);
-	while (a_1 <= a_n) {
-		elementos.push_back(a_1);
-		a_1 += razao;
+	for (int i = 0; i < k+2; ++i) {
+		pa[i] = a_1; 				 // inserindo elementos a partir de a_1
+		a_1 += razao; 				 // incremento com base na razao
 	}
-
-	return elementos;
 }
 
 int main() {
 	float a_1, a_n;
 	int k;
-	std::vector<float> resposta;
 
 	std::cout << "Insira o primeiro termo da P.A.: ";
 	std::cin >> a_1;
@@ -25,10 +19,15 @@ int main() {
 	std::cin >> a_n;
 	std::cout << "Insira o valor de k: ";
 	std::cin >> k;
-	resposta = interpor_pa(a_1, a_n, k);
+
+	float* pa;
+	pa = (float*) malloc(sizeof(float) * (k+2)); // alocando memoria para k+2 termos reais
+	interpor_pa(pa, a_1, a_n, k);
 
 	std::cout << "P.A. interpolada: ";
-	for (auto i: resposta) {
-		std::cout << i << " ";
+	for (int i = 0; i < k+2; ++i) {
+		std::cout << pa[i] << " ";
 	}
+
+	free(pa); // liberando memoria
 }

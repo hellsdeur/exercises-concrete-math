@@ -1,31 +1,19 @@
-#include <iostream> // std::cin and std::cout
-#include <vector> 	// std::vector
+#include <iostream> // std::cin e std::cout
 #include <cmath> 	// pow()
 
-std::vector<float> recorrencia_1b(float b_1, int n) {
-	std::vector<float> elementos = {b_1};
-
-	while (n > 1) {
-		elementos.push_back(pow(elementos.back(), 2));
-		--n;
-	}
-
-	return elementos;
-}
+#define a_1 2 	// primeiro termo da sequencia
+#define n 	6 	// tamanho da sequencia
 
 int main() {
-	int n;
-	float b_1;
-	std::vector<float> resposta;
+	float sequencia[n]; 						// declarando arrays de n elementos
 
-	std::cout << "Insira o valor de b_1: ";
-	std::cin >> b_1;
-	std::cout << "Insira o valor de n: ";
-	std::cin >> n;
-	resposta = recorrencia_1b(b_1, n);
+	sequencia[0] = a_1; 						// inserindo o primeiro termo
+	for (int i = 1; i < n; ++i) { 				// inserindo os demais termos
+		sequencia[i] = pow(sequencia[i-1], 2); 	// funcao de recorrencia
+	}
 
 	std::cout << n << " primeiros termos da sequencia: ";
-	for (auto i: resposta) {
-		std::cout << i << " ";
+	for (int i = 0; i < n; ++i) {
+		std::cout << sequencia[i] << " ";
 	}
 }

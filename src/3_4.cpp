@@ -31,7 +31,5 @@ int main() {
 	segmento = segmentar(input, a, b);
 
 	std::cout << "Segmento entre x["  << a << "] e x[" << b << "]: ";
-	for (auto i: segmento) {
-		std::cout << i << " ";
-	}
+	for (auto i: segmento) std::cout << i << " ";
 }

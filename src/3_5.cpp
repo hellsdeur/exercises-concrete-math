@@ -29,7 +29,5 @@ int main() {
 	prefixo = prefixar(input, k);
 
 	std::cout << "Prefixo de comprimento " << k << ": ";
-	for (auto i: prefixo) {
-		std::cout << i << " ";
-	}
+	for (auto i: prefixo) std::cout << i << " ";
 }

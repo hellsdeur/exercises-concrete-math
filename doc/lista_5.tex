@@ -1,0 +1,99 @@
+\section*{Atividade aula 5}
+
+\begin{enumerate}
+	\item \textbf{Utilizando as propriedades do somatório, mostre que:}
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = x_{n+1}-x_1$$
+	Através da propriedade associativa temos:
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = \sum_{k=1}^{n}x_{k+1} - \sum_{k=1}^{n}x_k$$
+	Podemos incrementar os índices dos limites do primeiro somatório, ao decrementar na mesma proporção o índice da fórmula do mesmo.
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = \sum_{k=2}^{n+1}x_{k} - \sum_{k=1}^{n}x_k$$
+	Podemos retirar as parcelas mais próximas dos extremos de um somatório. Vamos retirar a última parcela do primeiro e a primeira parcela do segundo.
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = x_{n+1}+\sum_{k=2}^{n}x_{k} - \left(x_1+\sum_{k=2}^{n}x_k\right)$$
+	Simplificando, obtemos a relação dada, como se queria demonstrar:
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = x_{n+1}+\sum_{k=2}^{n}x_{k} - x_1-\sum_{k=2}^{n}x_k$$
+	$$\sum_{k=1}^{n}(x_{k+1}-x_k) = x_{n+1} - x_1$$
+
+	\item \textbf{Utilizando as propriedades do somatório, mostre que:}
+	$$\sum_{k=1}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}$$
+	Expandindo o somatório original:
+	$$\sum_{k=1}^{n}k(k+1) = \sum_{k=1}^{n}k^2 + k$$
+	Usando a propriedade associativa:
+	$$\sum_{k=1}^{n}k(k+1) = \sum_{k=1}^{n}k^2 + \sum_{k=1}^{n}k$$
+	Ambos os somatórios são conhecidos, e ao substituirmos:
+	$$\sum_{k=1}^{n}k(k+1) = \frac{n(n+1)(2n+1)}{6} + \frac{n(n+1)}{2}$$
+	Simplificando, obtemos a relação dada, como se queria demonstrar:
+	$$\sum_{k=1}^{n}k(k+1) = \frac{(n^2+n)(2n+1)}{6} + \frac{n^2+n}{2}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{2n^3+n^2+2n^2+n}{6} + \frac{n^2+n}{2}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{2n^3+n^2+2n^2+n + 3n^2+3n}{6}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{2n^3+6n^2+4n}{6}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{n^3+3n^2+2n}{3}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{n(n^2+3n+2)}{3}$$
+	$$\sum_{k=1}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}$$
+	
+	\item \textbf{Utilizando as propriedades do somatório, mostre que:}
+	$$\sum_{k=0}^{n-1}2^k = 2^n-1$$
+	O somatório original é uma parcela de um somatório já conhecido, $\sum_{k=0}^{n}2^k$. Note que o somatório dado compreende as somas entre $k=0$ e $k=n-1$, restando apenas a adição da última parcela, $2^n$, para obtermos o somatório de $2^k$, mencionado acima.
+	$$\sum_{k=0}^{n-1}2^k = \left(\sum_{k=0}^{n}2^k\right) - 2^n$$
+	Substituindo $\sum_{k=0}^{n}2^k = 2^{n+1}-1$:
+	$$\sum_{k=0}^{n-1}2^k = 2^{n+1}-1 - 2^n$$
+	Simplificando, obtemos a relação dada, como se queria demonstrar:
+	$$\sum_{k=0}^{n-1}2^k = (2^{n}2^1)-1 - 2^n$$
+	$$\sum_{k=0}^{n-1}2^k = 2^n(2-1)-1$$
+	$$\sum_{k=0}^{n-1}2^k = 2^n-1$$
+	
+	\item \textbf{Utilizando as propriedades do somatório, mostre que:}
+	$$\sum_{k=1}^{n}k2^{k-1} = 2^n(n-1)+1$$
+	\textbf{Observe que: $2^{k-1}=2^k-2^{k-1}$}\\
+	Analisando a expressão do somatório, é possível observar que a mesma é a derivada de outro somatório conhecido, $\sum_{k=0}^{n} x^k = \frac{x^{n+1}-1}{x-1}$:
+	$$\sum_{k=1}^{n}k2^{k-1} = \dfrac{d}{dx} \left(\sum_{k=0}^{n} x^k\right) = \dfrac{d}{dx} \left(\frac{x^{n+1}-1}{x-1}\right)$$
+	Tomando apenas as duas últimas igualdades, podemos generalizar essas relações:
+	$$\dfrac{d}{dx} \left(\sum_{k=0}^{n} x^k\right) = \dfrac{d}{dx} \left(\frac{x^{n+1}-1}{x-1}\right)$$
+	Resolvendo ambas as derivadas, obtemos um expressão geral para qualquer valor de $x$:
+	$$\sum_{k=1}^{n}kx^{k-1} = \frac{[(x^{n+1}-1)'(x-1)]-[(x^{n+1}-1)(x-1)']}{(x-1)^2}$$
+	$$\sum_{k=1}^{n}kx^{k-1} = \frac{(n+1)x^n(x-1)-(x^{n+1}-1)}{(x-1)^2}$$
+	$$\sum_{k=1}^{n}kx^{k-1} = \frac{(n+1)x^n(x-1)-x^{n+1}+1}{(x-1)^2}$$
+	Tomando $x=2$, obtemos a relação dada, como se queria demonstrar:
+	$$\sum_{k=1}^{n}k2^{k-1} = \frac{(n+1)2^n(2-1)-2^{n+1}+1}{(2-1)^2}$$
+	$$\sum_{k=1}^{n}k2^{k-1} = 2^n(n+1)-2^{n+1}+1$$
+	$$\sum_{k=1}^{n}k2^{k-1} = 2^n(n+1)-2^n2^1+1$$
+	$$\sum_{k=1}^{n}k2^{k-1} = 2^n(n+1-2)+1$$
+	$$\sum_{k=1}^{n}k2^{k-1} = 2^n(n-1)+1$$
+	
+	\item \textbf{Utilizando as propriedades do somatório, mostre que:}
+	$$\sum_{k=1}^{100}(3-2k)^2 = 1293700$$
+	Expandindo a fórmula do somatório:
+	$$\sum_{k=1}^{100}(3-2k)^2 = \sum_{k=1}^{100}4k^2-12k+9$$
+	Pela propriedade da distributividade:
+	$$\sum_{k=1}^{100}(3-2k)^2 = \sum_{k=1}^{100}4k^2-\sum_{k=1}^{100}12k+\sum_{k=1}^{100}9$$
+	Retirando as constantes dos somatórios:
+	$$\sum_{k=1}^{100}(3-2k)^2 = \left(4\sum_{k=1}^{100}k^2\right) - \left(12\sum_{k=1}^{100}k\right) + \left(9\sum_{k=1}^{100}\right)$$
+	Substituindo os somatórios já conhecidos:
+	$$\sum_{k=1}^{100}(3-2k)^2 = \left(4\frac{n(n+1)(2n+1)}{6}\right) - \left(12\frac{n(n+1)}{2}\right) + \left(9\cdot n\right)$$
+	Substituindo $n=100$, obtemos a relação dada, como se queria demonstrar:
+	$$\sum_{k=1}^{100}(3-2k)^2 = \left(4\frac{100(100+1)(2\cdot 100+1)}{6}\right) - \left(12\frac{100(100+1)}{2}\right) + \left(9\cdot 100\right)$$
+	$$\sum_{k=1}^{100}(3-2k)^2 = (4\cdot 338350) - (12 \cdot 5050) + (9\cdot 100)$$
+	$$\sum_{k=1}^{100}(3-2k)^2 = 1353400 - 60600 + 900$$
+	$$\sum_{k=1}^{100}(3-2k)^2 = 1293700$$
+	
+	\pagebreak
+	\item \textbf{Utilizando uma linguagem de programação, codifique o seguinte somatório em que $n$, $x_i$ e $y_i$ são valores digitados pelo usuário:}
+	$$\sum_{i=1}^{n}x_i y_i$$
+	\lstinputlisting{../src/5_6.cpp}
+	
+	\item \textbf{Utilizando uma linguagem de programação, codifique o seguinte somatório em que $n$ é informado pelo usuário:}
+	$$\sum_{i=1}^{n}i$$
+	\lstinputlisting{../src/5_7.cpp}
+
+	\item \textbf{Utilizando uma linguagem de programação, codifique o seguinte somatório em que $n$ e $b_i$ são valores digitados pelo usuário:}
+	$$\sum_{i=1}^{n}b_i^2$$
+	\lstinputlisting{../src/5_8.cpp}
+	
+	\item \textbf{Utilizando uma linguagem de programação, codifique o seguinte somatório em que $n$ é informado pelo usuário:}
+	$$\sum_{i=0}^{n}2^i$$
+	\lstinputlisting{../src/5_9.cpp}
+	
+	\item \textbf{Utilizando uma linguagem de programação, codifique o seguinte somatório em que $n$, $x_i$ e $y_i$ são valores digitados pelo usuário:}
+	$$\sum_{i=1}^{n}\frac{1}{x_i}+\frac{1}{y_i}$$
+	\lstinputlisting{../src/5_10.cpp}
+	
+\end{enumerate}

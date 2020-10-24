@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.14)  14 OCT 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.14)  24 OCT 2020 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,14 +662,12 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-arrows.code.tex
-File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen279
-))
+(/usr/share/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip123
+\thanksmargin=\skip124
+\droptitle=\skip125
+)
 \c@csol=\count307
 
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -681,20 +679,20 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) (./helder_matos.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -734,13 +732,13 @@ ABD: EveryShipout initializing macros
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
-\scratchdimen=\dimen280
+\scratchdimen=\dimen279
 \scratchbox=\box69
 \nofMPsegments=\count309
 \nofMParguments=\count310
 \everyMPshowfont=\toks46
 \MPscratchCnt=\count311
-\MPscratchDim=\dimen281
+\MPscratchDim=\dimen280
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks47
@@ -755,61 +753,167 @@ e
 ))
 \AtBeginShipoutBox=\box70
 \c@lstlisting=\count314
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-6.
+8.
 
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) (./lista_1.tex
-(../src/1_1a.cpp) [1
+(../src/1_1a.cpp) (../src/1_1b.cpp) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(../src/1_1b.cpp) (../src/1_1c.cpp) [2] (../src/1_2.cpp) [3] [4]
-(../src/1_5.cpp) [5] (../src/1_7.cpp [6]) [7] (../src/1_8.cpp) [8]
-(../src/1_9.cpp) [9]) [10] (./lista_2.tex (../src/2_1.cpp) (../src/2_2.cpp
-[11]) (../src/2_3.cpp) [12] (../src/2_4.cpp) (../src/2_5.cpp [13])
-(../src/2_6.cpp)) [14] (./helder_matos.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (../src/1_1c.cpp) (../src/
+1_2.cpp) [2] [3] (../src/1_5.cpp)
+[4] (../src/1_7.cpp [5]) [6] (../src/1_8.cpp) (../src/1_9.cpp [7]) [8])
+[9] (./lista_3.tex (../src/3_1.cpp) [10] (../src/3_2.cpp) [11] (../src/3_3.cpp)
+
+Overfull \hbox (0.63257pt too wide) in paragraph at lines 17--18
+[][]\T1/cmtt/m/n/12 [4:11] []\T1/cmr/m/n/12 - [][]\T1/cmtt/m/n/12 concatenar []
+\T1/cmr/m/n/12 faz a in-ser-ção dos ve-to-res [][]\T1/cmtt/m/n/12 vec1 []\T1/cm
+r/m/n/12 e [][]\T1/cmtt/m/n/12 vec2 []\T1/cmr/m/n/12 em um ve-tor va-zio [][]\T
+1/cmtt/m/n/12 concatenacao[]\T1/cmr/m/n/12 .
+ []
+
+[12] (../src/3_4.cpp) [13] (../src/3_5.cpp) [14] (../src/3_6.cpp)) [15]
+(./lista_5.tex [16] [17] [18] [19] (../src/5_6.cpp) (../src/5_7.cpp)
+(../src/5_8.cpp [20]) (../src/5_9.cpp) (../src/5_10.cpp)) [21] (./lista_7.tex
+<7_1.png, id=91, 230.36063pt x 177.66376pt>
+File: 7_1.png Graphic file (type png)
+<use 7_1.png>
+Package pdftex.def Info: 7_1.png  used on input line 7.
+(pdftex.def)             Requested size: 230.36005pt x 177.66331pt.
+
+(../src/7_1.cpp
+Overfull \hbox (23.47437pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [22 <./7_1.png (PNG copy)>]
+<7_2.png, id=95, 230.36063pt x 177.66376pt>
+File: 7_2.png Graphic file (type png)
+<use 7_2.png>
+Package pdftex.def Info: 7_2.png  used on input line 16.
+(pdftex.def)             Requested size: 230.36005pt x 177.66331pt.
+ (../src/7_2.cpp
+Overfull \hbox (33.67197pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [23 <./7_2.png (PNG copy)>]
+<7_3.png, id=99, 247.67531pt x 198.7425pt>
+File: 7_3.png Graphic file (type png)
+<use 7_3.png>
+Package pdftex.def Info: 7_3.png  used on input line 25.
+(pdftex.def)             Requested size: 247.6747pt x 198.742pt.
+ (../src/7_3.cpp
+Overfull \hbox (8.17796pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [24 <./7_3.png (PNG copy)>]
+<7_4.png, id=103, 242.40562pt x 192.72pt>
+File: 7_4.png Graphic file (type png)
+<use 7_4.png>
+Package pdftex.def Info: 7_4.png  used on input line 34.
+(pdftex.def)             Requested size: 242.40501pt x 192.71951pt.
+ (../src/7_4.cpp
+Overfull \hbox (38.77077pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [25 <./7_4.png (PNG copy)>]
+<7_5.png, id=108, 242.40562pt x 192.72pt>
+File: 7_5.png Graphic file (type png)
+<use 7_5.png>
+Package pdftex.def Info: 7_5.png  used on input line 43.
+(pdftex.def)             Requested size: 242.40501pt x 192.71951pt.
+ (../src/7_5.cpp
+Overfull \hbox (33.67197pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [26 <./7_5.png (PNG copy)>]
+<7_6.png, id=112, 242.40562pt x 192.72pt>
+File: 7_6.png Graphic file (type png)
+<use 7_6.png>
+Package pdftex.def Info: 7_6.png  used on input line 52.
+(pdftex.def)             Requested size: 242.40501pt x 192.71951pt.
+ (../src/7_6.cpp
+Overfull \hbox (18.37556pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [27 <./7_6.png (PNG copy)>]
+<7_7.png, id=116, 252.19218pt x 202.50656pt>
+File: 7_7.png Graphic file (type png)
+<use 7_7.png>
+Package pdftex.def Info: 7_7.png  used on input line 61.
+(pdftex.def)             Requested size: 252.19156pt x 202.50604pt.
+ (../src/7_7.cpp
+Overfull \hbox (48.96837pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [28 <./7_7.png (PNG copy)>]
+<7_8.png, id=120, 261.97874pt x 212.29312pt>
+File: 7_8.png Graphic file (type png)
+<use 7_8.png>
+Package pdftex.def Info: 7_8.png  used on input line 70.
+(pdftex.def)             Requested size: 261.9781pt x 212.2926pt.
+ (../src/7_8.cpp
+Overfull \hbox (43.86957pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)) [29 <./7_8.png (PNG copy)>] (./helder_matos.aux) ) 
 Here is how much of TeX's memory you used:
- 19025 strings out of 480478
- 352767 string characters out of 5905959
- 837670 words of memory out of 5000000
- 34635 multiletter control sequences out of 15000+600000
+ 18722 strings out of 480478
+ 341380 string characters out of 5905959
+ 829829 words of memory out of 5000000
+ 34298 multiletter control sequences out of 15000+600000
  546363 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,60p,838b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/d
-vips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
-r/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb>
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on helder_matos.pdf (14 pages, 305067 bytes).
+ 60i,7n,60p,815b,1738s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fon
+ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public
+/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1
+728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist
+/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
+ftt0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on helder_matos.pdf (29 pages, 488131 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 186 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

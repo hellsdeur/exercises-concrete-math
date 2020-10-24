@@ -1,10 +1,9 @@
 #include <iostream> // std::cin e std::cout
-#include <vector> 	// std::vector
 #include <cmath> 	// std::floor
 #include <string> 	// std::string
 #include <sstream> 	// std::isstringstream
 
-float round(float num) {
+float chao(float num) { // arredonda para baixo, 6 casas decimais
 	return std::floor(num*100000.0) / 100000.0;
 }
 
@@ -15,7 +14,7 @@ float parse_stof(std::string str) {
 	int numerador, denominador;
 
 	for (auto c: str) {
-		if (std::isdigit(c)) {
+		if (std::isdigit(c) || c == '-') {
 			num += c;
 		}
 		else if (c == '/') {
@@ -35,37 +34,33 @@ float parse_stof(std::string str) {
 	return parsed_float;
 }
 
-std::vector<float> split_and_parse(std::string input) {
-	std::vector<float> sequencia;
-	std::vector<std::string> splitted_strings;
-	std::istringstream iss(input);
-	std::string number;
+void split(float* sequencia, int n, std::string input) {
+	std::istringstream iss(input); 		// stream de entrada das strings
+	std::string number; 				// string que representa um numero
 
-	while (std::getline(iss, number, ' ')) {
-		splitted_strings.push_back(number);
+	int i = 0;
+	while (std::getline(iss, number, ' ')) { 	// number armazena um termo
+		sequencia[i] = parse_stof(number); 		// parse de cada termo
+		++i;
 	}
-	for (auto str: splitted_strings) {
-		sequencia.push_back(parse_stof(str));
-	}
-
-	return sequencia;
 }
 
-void categorizar_pg(std::vector<float> seq, int n) {
-	float q = round(seq[1] / seq[0]);
-	bool pg = false;
-
+bool checar_pg(float* sequencia, float q, int n) {
 	for (int i = 2; i < n; ++i) {
-		if (round(seq[i] / seq[i-1]) == q || q == 0 && seq[i-1] == 0) {
-			pg = true;
-		}
-		else {
-			pg = false;
-			break;
+		if (chao(sequencia[i]/sequencia[i-1]) != q) {
+			return false;
 		}
 	}
+	return true;
+}
 
-	if (pg == true) {
+void categorizar_pg(float* seq, int n) {
+	float q = chao(seq[1] / seq[0]);
+
+	if (checar_pg(seq, q, n) == false) {
+		std::cout << "A sequencia nao eh P.G.";
+	}
+	else {
 		if ((q > 1 && seq[0] > 0) || (q > 0 && q < 1 && seq[0] < 0)) {
 			std::cout << "A sequencia eh P.G. crescente";
 		}
@@ -82,23 +77,24 @@ void categorizar_pg(std::vector<float> seq, int n) {
 			std::cout << "A sequencia eh P.G. estacionaria";
 		}
 	}
-	else {
-		std::cout << "A sequencia nao eh P.G.";
-	}
+
 }
 
 int main() {
 	int n;
-	float x;
-	std::vector<float> sequencia;
 	std::string input;
 
 	std::cout << "Insira o tamanho da sequencia: ";
 	std::cin >> n;
+
 	std::cout << "Insira os " << n << " primeiros termos da sequencia: ";
 	std::cin.ignore();
 	std::getline(std::cin, input);
-	sequencia = split_and_parse(input);
+
+	float* sequencia;
+	sequencia = (float*) malloc(sizeof(float) * n);
+	split(sequencia, n, input);
 
 	categorizar_pg(sequencia, n);
+	free(sequencia);
 }

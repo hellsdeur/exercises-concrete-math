@@ -1,0 +1,34 @@
+\section*{Atividade aula 3}
+
+\begin{enumerate}
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	uma sequência digitada pelo usuário e exiba a subsequência de números ímpares.}
+	\lstinputlisting{../src/3_1.cpp}
+	\verb|[4:12]| - Nas soluções da lista 3 foi utilizada a classe de objetos do C++ \verb|std::vector|, pela facilidade e flexibilidade ao armazenar, inserir e referenciar elementos. \verb|subseq_impar| recebe uma sequência e retorna a subsequência de números ímpares.
+	
+	\pagebreak
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	uma sequência digitada pelo usuário e exiba a subsequência de números primos.}
+	\lstinputlisting{../src/3_2.cpp}
+	\verb|[5:13]| - \verb|primacidade| retorna um booleano indicando a primacidade de um número.\\
+	\verb|[15:21]| - \verb|subseq_primos| retorna a subsequência de números primos, a partir da sequência de entrada.
+	
+	\pagebreak
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	duas sequências A e B digitada pelo usuário e exiba a concatenação BA.}
+	\lstinputlisting{../src/3_3.cpp}
+	\verb|[4:11]| - \verb|concatenar| faz a inserção dos vetores \verb|vec1| e \verb|vec2| em um vetor vazio \verb|concatenacao|. Note que \verb|vec1| é sempre inserido antes de \verb|vec2|, logo a ordem dos vetores na chamada da função importa (linha \verb|[35]|).
+	
+	\pagebreak
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	uma sequência, os índices $a$ e $b$ digitados pelo usuário, e exiba o segmento com os extremos $x_a$ e $x_b$. Considere que sempre $a \leq b$.}
+	\lstinputlisting{../src/3_4.cpp}
+	\verb|[4:12]| - \verb|segmentar| recebe a sequência de entrada e os limites do segmento. O segmento vazio é declarado com um tamanho $b-a+1$. São declarados dois iteratores, que apontam para início (iterador \verb|begin()|, apontando para o primeiro elemento da entrada + a) e fim (iterador \verb|begin()|, apontando para o primeiro elemento da entrada, + b + 1) do segmento, respectivamente. Assim, os elementos que estão entre os limites indicados pelos iteradores são copiados para o segmento vazio.
+	
+	\pagebreak
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	uma sequência, o valor $k$ digitado pelo usuário, e exiba o prefixo de comprimento $k$.}
+	\lstinputlisting{../src/3_5.cpp}
+	\verb|[4:12]| - Semelhante à solução anterior, os elementos que estão entre os limites apontados pelos iteradores de início (iterador \verb|begin()|, apontando para o primeiro elemento da entrada) e fim (iterador \verb|begin()|, apontando para o primeiro elemento da entrada + k) são copiados para um vetor \verb|prefixo| de tamanho $k$.
+	
+	\pagebreak
+	\item \textbf{Escolha uma linguagem de programação e escreva um programa que receba	uma sequência, o valor $k$ digitado pelo usuário, e exiba o sufixo de comprimento $k$.}
+	\lstinputlisting{../src/3_6.cpp}
+	\verb|[4:12]| - Para encontrar o início do sufixo, o iterador \verb|begin()| é acrescido da diferença entre o tamanho da entrada pelo tamanho do sufixo. O iterador \verb|end()| aponta para o último elemento da sequência. Assim, os elementos entre os dois iteradores são copiados para o vetor \verb|sufixo|.
+	
+\end{enumerate}

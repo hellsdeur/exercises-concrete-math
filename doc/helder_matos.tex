@@ -4,18 +4,20 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage[margin=2cm]{geometry}
-\usepackage{booktabs, float, amsmath,amsthm,amssymb, enumitem, tikz, mdframed, listings, xcolor, graphicx}
-\usetikzlibrary{arrows}
+\usepackage{booktabs, float, amsmath,amsthm,amssymb, enumitem, tikz, mdframed, listings, xcolor, graphicx, titling}
 
+\setlength{\droptitle}{-1em}
+
+\renewcommand{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand{\theenumii}{\theenumi.\alph{enumii}}
 \newcounter{csol}[enumi]
 \renewcommand*{\thecsol}{\theenumi.\alph{csol}}
-\newmdtheoremenv[linecolor=black!50]{solution}[csol]{Solution}
 
 \lstset{basicstyle=\scriptsize\ttfamily\color{black},
 		language=C++,
 		frame=single,
 		keywordstyle=\color{red},
-		stringstyle=\color{green},
+		stringstyle=\color[rgb]{0,.5,0},
 		commentstyle=\color{gray},
 		numbers=left,
 		numbersep=5pt,
@@ -33,10 +35,21 @@
 
 \maketitle
 
-\textbf{Atenção: } A linguagem C++ foi usada para implementação. Os passos importantes do programa são descritos e indicados pelas linhas \verb|[inicial:final]|, com limites inclusivos.
+\textbf{Atenção: } As questões de implementação foram feitas em C++. Passos importantes dos programas são descritos pelas indicações de linhas \verb|[inicial:final]|, com limites inclusivos.
 
+\setcounter{section}{1}
 \input{lista_1}
 \pagebreak
-\input{lista_2}
+
+\setcounter{section}{3}
+\input{lista_3}
+\pagebreak
+
+\setcounter{section}{5}
+\input{lista_5}
+\pagebreak
+
+\setcounter{section}{7}
+\input{lista_7}
 
 \end{document}
